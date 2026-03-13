@@ -30,18 +30,7 @@ Základní architektura je postavena na relační databázi, která se skládá 
 
 ## User Flow
 
-```mermaid
-graph TD
-    A[Landing Page / Přihlášení] --> B[Dashboard]
-    B --> C[Detail Interpreta]
-    B --> D[Detail Alba]
-    B --> E[Moje Playlisty]
-    C --> F((Přehrávač))
-    D --> F
-    E --> G[Detail Playlistu]
-    G --> F
-    B --> F
-```
+![Alt text](IMG_19793.heic)
 
 ---
 
@@ -54,3 +43,7 @@ graph TD
 
 ![Alt text](IMG_19792.heic)
 
+
+### E-R diagram
+
+![Alt text](IMG_19794.heic)
