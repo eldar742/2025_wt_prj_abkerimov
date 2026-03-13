@@ -49,24 +49,6 @@ graph TD
 
 ### Mobilní verze
 
-```text
-+-----------------------+
-| [Menu]  MelodyStream  |
-+-----------------------+
-|      Doporučeno       |
-| [Karta] [Karta] [Karta|
-|                       |
-|      Poslední alba    |
-| [Obr 1] Název Alba 1  |
-| [Obr 2] Název Alba 2  |
-|                       |
-|                       |
-+-----------------------+
-| (>) Track Name   0:45 |
-+-----------------------+
-| [Home] [Search] [Lib] |
-+-----------------------+
-```
 
 ### Desktopová verze
 
