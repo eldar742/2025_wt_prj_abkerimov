@@ -30,7 +30,16 @@
             <th scope="row" class="text-secondary align-middle">{{ forloop.counter }}</th>
             <td class="align-middle fw-bold">{{ track.title }}</td>
             <td class="align-middle"><a href="{% url 'album_detail' track.album.id %}" class="text-secondary text-decoration-none hover-white">{{ track.album.title }}</a></td>
-            <td class="align-middle text-secondary text-end">{{ track.duration }}s</td>
+            <td class="align-middle text-secondary text-end">
+    <span class="me-3">{{ track.duration }}s</span>
+    
+    <a href="{% url 'remove_from_playlist' playlist.id track.id %}" 
+       class="btn btn-outline-danger btn-sm" 
+       onclick="return confirm('Opravdu chceš tuto skladbu odebrat z playlistu?')"
+       style="border-radius: 50%; width: 30px; height: 30px; padding: 0; line-height: 28px; text-align: center;">
+        &times;
+    </a>
+</td>
         </tr>
         {% empty %}
         <tr>

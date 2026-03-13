@@ -37,6 +37,19 @@
             <td class="align-middle fw-bold">{{ track.title }}</td>
             <td class="align-middle text-secondary">{{ track.genre }}</td>
             <td class="align-middle text-secondary text-end">{{ track.duration }}s</td>
+            <td class="align-middle text-end">
+    <form action="{% url 'add_to_playlist' track.id %}" method="POST" class="d-inline">
+        {% csrf_token %}
+        <select name="playlist_id" class="form-select form-select-sm d-inline-block bg-dark text-light border-secondary" style="width: auto;" required>
+            <option value="" disabled selected>+</option>
+            {% for pl in user.playlists.all %}
+                <option value="{{ pl.id }}">{{ pl.name }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" class="btn btn-success btn-sm">Přidat</button>
+    </form>
+    <span class="ms-2 text-secondary">{{ track.duration }}s</span>
+</td>
         </tr>
         {% empty %}
         <tr>
