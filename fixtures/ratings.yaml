@@ -1,0 +1,6 @@
+- model: melodystream.rating
+  pk: 1
+  fields:
+    track_id: 1
+    user: "hudebni_nadsenec"
+    value: 5
