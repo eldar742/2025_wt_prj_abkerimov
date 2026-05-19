@@ -1,0 +1,25 @@
+- model: melodystream.track
+  pk: 1
+  fields:
+    title: "Až na měsíc"
+    album_title: "Černobílej svět"
+    release_year: 2019
+    duration_seconds: 215
+    audio_url: "https://example.com/audio/az_na_mesic.mp3"
+    cover_url: "https://example.com/covers/cernobilej_svet.jpg"
+    artist_id: 1
+    featuredartist_ids: [1] # Odkazuje na Nik Tendo z model_featuredartist
+    genre_ids: [1, 4]
+
+- model: melodystream.track
+  pk: 2
+  fields:
+    title: "Safír"
+    album_title: "ROADTRIP"
+    release_year: 2023
+    duration_seconds: 158
+    audio_url: "https://example.com/audio/safir.mp3"
+    cover_url: "https://example.com/covers/roadtrip.jpg"
+    artist_id: 2
+    featuredartist_ids: [2] # Odkazuje na Ektora
+    genre_ids: [1, 2]
