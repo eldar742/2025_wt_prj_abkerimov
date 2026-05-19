@@ -1,0 +1,19 @@
+- model: melodystream.genre
+  pk: 1
+  fields:
+    name: "Rap & Hip-Hop"
+
+- model: melodystream.genre
+  pk: 2
+  fields:
+    name: "Pop"
+
+- model: melodystream.genre
+  pk: 3
+  fields:
+    name: "R&B"
+
+- model: melodystream.genre
+  pk: 4
+  fields:
+    name: "Trap"
