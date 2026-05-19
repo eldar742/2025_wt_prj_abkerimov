@@ -27,3 +27,10 @@ urlpatterns = [
 # Toto je nutné pro načítání obrázků (coverů alb atd.) během vývoje
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('api-playground/', views.api_playground, name='api_playground'),
+]
