@@ -115,3 +115,8 @@ def remove_from_playlist(request, playlist_id, track_id):
     
     playlist.tracks.remove(track) # Odstraní pouze vazbu, ne skladbu z DB
     return redirect('playlist_detail', playlist_id=playlist.id)
+def index(request):
+    return render(request, "melody/index.html")
+
+def api_playground(request):
+    return render(request, 'melody/api_playground.html')

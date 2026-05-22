@@ -1,29 +1,29 @@
-"""
-URL configuration for prj project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/6.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
-from django.urls import path, include # Přidáno 'include'
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from melody import views 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('melody.urls')), # Všechny ostatní adresy pošleme do aplikace melody
+    
+    # Mapování pohledů přímo z aplikace melody (přesně podle vzoru chalupnicek)
+    path('', views.landing_page, name='landing_page'),
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('artist/<int:artist_id>/', views.artist_detail, name='artist_detail'),
+    path('album/<int:album_id>/', views.album_detail, name='album_detail'),
+    path('playlists/', views.playlists, name='playlists'),
+    path('playlist/<int:playlist_id>/', views.playlist_detail, name='playlist_detail'),
+    path('playlist/new/', views.create_playlist, name='create_playlist'),
+    path('add-to-playlist/<int:track_id>/', views.add_to_playlist, name='add_to_playlist'),
+    path('playlist/<int:playlist_id>/remove/<int:track_id>/', views.remove_from_playlist, name='remove_from_playlist'),
+    path('search/', views.search, name='search'),
+    path('signup/', views.signup, name='signup'),
+    
+    # Autentizace (pokud budeš využívat vestavěné šablony pro login)
+    path('auth/', include('django.contrib.auth.urls')),
 ]
 
-# Toto je nutné pro načítání obrázků (coverů alb atd.) během vývoje
+# Pro načítání médií/obrázků
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
