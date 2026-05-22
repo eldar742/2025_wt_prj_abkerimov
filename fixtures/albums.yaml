@@ -1,0 +1,15 @@
+- model: melody.album
+  pk: 1
+  fields:
+    title: "Meteora"
+    release_date: "2003-03-25"
+    cover: "albums/meteora.jpg"
+    artist: 1
+
+- model: melody.album
+  pk: 2
+  fields:
+    title: "The Eminem Show"
+    release_date: "2002-05-26"
+    cover: "albums/eminem_show.jpg"
+    artist: 2

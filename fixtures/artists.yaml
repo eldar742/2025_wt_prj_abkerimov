@@ -1,23 +1,13 @@
-- model: melodystream.artist
+- model: melody.artist
   pk: 1
   fields:
-    name: "Viktor Sheen"
-    formed_year: 2010
-    country: "Česko"
-    photo_url: "https://example.com/artists/sheen.jpg"
+    name: "Linkin Park"
+    bio: "Americká rocková skupina založená v roce 1996."
+    image: "artists/linkin_park.jpg"
 
-- model: melodystream.artist
+- model: melody.artist
   pk: 2
   fields:
-    name: "Calin"
-    formed_year: 2016
-    country: "Česko"
-    photo_url: "https://example.com/artists/calin.jpg"
-
-- model: melodystream.artist
-  pk: 3
-  fields:
-    name: "Yzomandias"
-    formed_year: 2015
-    country: "Česko"
-    photo_url: "https://example.com/artists/yzo.jpg"
+    name: "Eminem"
+    bio: "Americký rapper, hudební producent a herec."
+    image: "artists/eminem.jpg"
